@@ -28,41 +28,47 @@ const projects = [
 </script>
 
 <template>
-    <section id="projects" class="py-24 px-6">
-        <div class="container-narrow text-center">
-            <!-- Header -->
-            <div class="flex justify-center mb-3">
-                <span class="tag bg-primary-light text-primary border-primary">Portfolio</span>
+    <section id="projects" class="py-24 px-6 bg-white brutal-border-b border-black">
+        <div class="container-narrow">
+            <!-- Giant Header -->
+            <div class="mb-16">
+                <h2 class="heading text-6xl md:text-8xl leading-none text-black">CASE<br>STUDIES</h2>
+                <div class="w-full h-3 bg-primary mt-6 border-y-4 border-black"></div>
             </div>
-            <h2 class="heading text-3xl md:text-4xl mb-3">Featured Projects</h2>
-            <p class="text-gray text-sm max-w-sm mx-auto mb-12">
-                Recent work showcasing modern web development.
-            </p>
 
-            <!-- Cards — stacked vertically for proper centering -->
-            <div class="space-y-5">
-                <div v-for="(p, i) in projects" :key="i" class="card overflow-hidden">
-                    <div class="md:flex">
-                        <!-- Color strip -->
-                        <div :class="p.color"
-                            class="md:w-20 p-5 flex items-center justify-center border-b-3 md:border-b-0 md:border-r-3 border-black">
-                            <component :is="p.icon" :size="28" stroke-width="2" />
+            <!-- Spacious Vertical Stack -->
+            <div class="flex flex-col gap-16">
+                <div v-for="(p, i) in projects" :key="i"
+                    class="card relative bg-white border-5 border-black p-0 shadow-[12px_12px_0_#0F0F0F] hover:-translate-y-2 hover:shadow-[16px_16px_0_#FF00FF] transition-all duration-300 group">
+
+                    <!-- Top Strip -->
+                    <div :class="p.color"
+                        class="h-14 w-full border-b-5 border-black flex items-center px-8 justify-between">
+                        <span class="font-black tracking-widest uppercase text-lg">PROJ 0{{ i + 1 }}</span>
+                        <span class="font-black tracking-widest uppercase text-sm opacity-80">2026 WORKS</span>
+                    </div>
+
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
+                            <div>
+                                <component :is="p.icon" :size="56" stroke-width="2" class="text-black mb-6" />
+                                <h3 class="heading text-4xl md:text-5xl mb-4 text-black">{{ p.title }}</h3>
+                            </div>
+                            <a href="#"
+                                class="w-16 h-16 shrink-0 bg-accent border-4 border-black flex items-center justify-center hover:bg-black group-hover:bg-primary transition-colors">
+                                <ArrowUpRight :size="32" stroke-width="2.5" class="text-black group-hover:text-white" />
+                            </a>
                         </div>
-                        <!-- Body -->
-                        <div class="flex-1 p-6 md:p-7 text-center md:text-left">
-                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
-                                <h3 class="heading text-xl">{{ p.title }}</h3>
-                                <a href="#"
-                                    class="hidden md:flex items-center justify-center w-8 h-8 border-2 border-black rounded-lg shadow-[2px_2px_0_#1A1A1A] hover:-translate-y-0.5 transition-transform bg-white">
-                                    <ArrowUpRight :size="14" />
-                                </a>
-                            </div>
-                            <p class="text-gray text-sm leading-relaxed mb-4">{{ p.desc }}</p>
-                            <div class="flex flex-wrap justify-center md:justify-start gap-2">
-                                <span v-for="t in p.tech" :key="t"
-                                    class="px-3 py-1 text-xs font-bold uppercase bg-cream border-2 border-black rounded-full">{{
-                                    t }}</span>
-                            </div>
+
+                        <p class="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed mb-10 max-w-3xl">
+                            {{ p.desc }}
+                        </p>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span v-for="t in p.tech" :key="t"
+                                class="px-4 py-2 font-black text-sm bg-white border-3 border-black text-black group-hover:bg-black group-hover:text-white transition-colors uppercase">
+                                {{ t }}
+                            </span>
                         </div>
                     </div>
                 </div>

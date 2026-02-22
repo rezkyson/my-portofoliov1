@@ -2,58 +2,58 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-@theme {
+:root {
   --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif; /* Use rigid font everywhere */
 
-  --color-cream: #F5F1EB;
+  /* Pure contrast */
   --color-white: #FFFFFF;
-  --color-black: #1A1A1A;
-  --color-gray: #6B7280;
+  --color-black: #000000;
+  --color-gray: #000000; /* Force stark colors */
 
-  --color-primary: #4F46E5;
-  --color-primary-light: #EEF2FF;
-  --color-secondary: #F97316;
-  --color-secondary-light: #FFF7ED;
+  /* Neon palette */
+  --color-bg: #EAEAEA;
+  --color-primary: #FF00FF; /* Neon Pink */
+  --color-secondary: #00FFFF; /* Cyan */
+  --color-accent: #FFFD00; /* Yellow */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--color-black);
-  background: var(--color-cream);
+  background: var(--color-bg);
   overflow-x: hidden;
+  line-height: 1.4;
+  -webkit-font-smoothing: none; /* Make fonts look jagged/raw */
 }
 
-/* Noise texture */
-.noise::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 180px;
-}
+/* Base text */
+p { font-weight: 600; }
+
+/* Structural Grid lines (Now mostly removed for spacious design) */
+.brutal-border-b { border-bottom: 5px solid var(--color-black); }
+.brutal-border-t { border-top: 5px solid var(--color-black); }
+
+/* Remove noise for cleaner starkness, or keep it extremely subtle */
 
 .z-content { position: relative; z-index: 2; }
 
-/* ---- BRUTALIST COMPONENTS ---- */
+/* ---- RADICAL BRUTALIST COMPONENTS ---- */
 
-/* Base card */
+/* Base container */
 .card {
   background: var(--color-white);
-  border: 3px solid var(--color-black);
-  border-radius: 12px;
-  box-shadow: 6px 6px 0px var(--color-black);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 5px solid var(--color-black);
+  border-radius: 0px; /* SHARP CORNERS */
+  box-shadow: 12px 12px 0px var(--color-black);
+  transition: all 0.1s linear; /* Jagged transition */
 }
 .card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0px var(--color-black);
+  transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0px var(--color-black);
 }
 
 /* Button */
@@ -61,86 +61,100 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 14px 28px;
+  gap: 12px;
+  padding: 16px 32px;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  border: 3px solid var(--color-black);
-  border-radius: 12px;
-  box-shadow: 4px 4px 0px var(--color-black);
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  border: 5px solid var(--color-black);
+  border-radius: 0px;
+  box-shadow: 8px 8px 0px var(--color-black);
   cursor: pointer;
-  transition: all 0.15s;
-  text-decoration: none;
-  background: var(--color-white);
+  background: var(--color-accent);
   color: var(--color-black);
+  transition: none; /* Instant snap for brutalist feel */
 }
 .btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--color-black);
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--color-black);
 }
 .btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 var(--color-black);
+  transform: translate(6px, 6px);
+  box-shadow: 2px 2px 0px var(--color-black);
 }
-.btn-fill {
-  background: var(--color-primary);
-  color: white;
-}
-.btn-orange {
-  background: var(--color-secondary);
-  color: white;
-}
+
+.btn-fill { background: var(--color-secondary); color: var(--color-black); }
+.btn-fill:hover { background: var(--color-black); color: var(--color-white); }
+.btn-orange { background: var(--color-primary); color: var(--color-black); }
 
 /* Tag/badge */
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  gap: 0;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 2px solid var(--color-black);
-  border-radius: 999px;
-  box-shadow: 2px 2px 0px var(--color-black);
+  border: 4px solid var(--color-black);
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px var(--color-black);
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
-/* Pill (for skills) */
-.pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  font-weight: 600;
-  font-size: 14px;
-  background: var(--color-white);
-  border: 2.5px solid var(--color-black);
-  border-radius: 999px;
-  box-shadow: 3px 3px 0px var(--color-black);
-  transition: all 0.2s;
+/* Marquee */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 5px solid var(--color-black);
+  border-top: 5px solid var(--color-black);
+  background: var(--color-accent);
+  padding: 10px 0;
 }
-.pill:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0px var(--color-black);
+.marquee-content {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Section heading */
 .heading {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+.heading-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-black);
 }
 
 /* Container */
+.container-full {
+  width: 100%;
+  margin: 0 auto;
+}
 .container-narrow {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-cream); }
-::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
-::selection { background: var(--color-primary); color: white; }
+::-webkit-scrollbar { width: 16px; border-left: 5px solid var(--color-black); }
+::-webkit-scrollbar-track { background: var(--color-white); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border: 4px solid var(--color-black); }
+::selection { background: var(--color-primary); color: var(--color-white); }
