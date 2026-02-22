@@ -15,7 +15,7 @@ const go = (id) => {
 </script>
 
 <template>
-    <nav class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur-md border-b-4 border-black">
+    <nav class="fixed top-0 inset-x-0 z-50 bg-bg border-b-4 border-black">
         <div class="container-narrow flex items-center justify-between h-14">
             <a href="#home" class="heading text-lg" @click.prevent="go('#home')">
                 rezky<span class="text-primary">.</span>

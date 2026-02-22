@@ -2,20 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-:root {
+@theme {
   --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Space Grotesk', sans-serif; /* Use rigid font everywhere */
+  --font-body: 'Space Grotesk', sans-serif;
 
-  /* Pure contrast */
-  --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-gray: #000000; /* Force stark colors */
+  /* Restored Soft Contrast Brutalism */
+  --color-white: #F4F4F0; /* Off-white paper */
+  --color-black: #0F0F0F; /* Slightly softer black */
+  --color-gray: #1A1A1A;  /* Dark grays */
 
-  /* Neon palette */
-  --color-bg: #EAEAEA;
-  --color-primary: #FF00FF; /* Neon Pink */
-  --color-secondary: #00FFFF; /* Cyan */
-  --color-accent: #FFFD00; /* Yellow */
+  /* Neon accents */
+  --color-bg: #EAE8E3; /* Warm paper background */
+  --color-primary: #FF2A6D; /* Cyberpunk Pinkish-Red */
+  --color-secondary: #00FFCC; /* Toxic Cyan */
+  --color-accent: #FFFF00; /* Caution Yellow */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -109,16 +109,8 @@ p { font-weight: 600; }
 }
 
 /* Marquee */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 5px solid var(--color-black);
-  border-top: 5px solid var(--color-black);
-  background: var(--color-accent);
-  padding: 10px 0;
-}
 .marquee-content {
-  display: inline-block;
+  display: flex;
   font-weight: 900;
   font-size: 2rem;
   letter-spacing: -3px;
@@ -127,7 +119,7 @@ p { font-weight: 600; }
 }
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Section heading */

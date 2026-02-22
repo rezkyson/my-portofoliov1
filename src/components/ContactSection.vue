@@ -33,20 +33,29 @@ import { Github, ArrowUpRight, Mail, Heart, Instagram } from 'lucide-vue-next'
                 <!-- Harsh Buttons area -->
                 <div class="w-full lg:w-[400px] flex flex-col gap-6">
                     <a href="mailto:hello@rezky.dev"
-                        class="card bg-accent flex items-center p-8 border-5 border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black hover:text-white transition-all duration-200 group text-decoration-none text-black">
-                        <Mail :size="48" class="mr-6 group-hover:scale-110 transition-transform" stroke-width="2" />
-                        <span class="heading text-3xl">EMAIL ME</span>
+                        class="bg-accent flex items-center p-8 border-[5px] border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black transition-all duration-150 group text-decoration-none">
+                        <Mail :size="48"
+                            class="mr-6 text-black group-hover:text-white group-hover:scale-110 transition-all duration-150"
+                            stroke-width="2" />
+                        <span
+                            class="heading text-3xl text-black group-hover:text-white transition-colors duration-150">EMAIL
+                            ME</span>
                     </a>
                     <a href="https://github.com/rezkyson" target="_blank"
-                        class="card bg-white flex items-center p-8 border-5 border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black hover:text-white transition-all duration-200 group text-decoration-none text-black">
-                        <Github :size="48" class="mr-6 group-hover:scale-110 transition-transform" stroke-width="2" />
-                        <span class="heading text-3xl">rezkyson</span>
+                        class="bg-white flex items-center p-8 border-[5px] border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black transition-all duration-150 group text-decoration-none">
+                        <Github :size="48"
+                            class="mr-6 text-black group-hover:text-white group-hover:scale-110 transition-all duration-150"
+                            stroke-width="2" />
+                        <span
+                            class="heading text-3xl text-black group-hover:text-white transition-colors duration-150">rezkyson</span>
                     </a>
                     <a href="https://instagram.com/rezkysaleng" target="_blank"
-                        class="card bg-secondary flex items-center p-8 border-5 border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black hover:text-white transition-all duration-200 group text-decoration-none text-black">
-                        <Instagram :size="48" class="mr-6 group-hover:scale-110 transition-transform"
+                        class="bg-secondary flex items-center p-8 border-[5px] border-black shadow-[8px_8px_0_#000] hover:-translate-y-2 hover:shadow-[12px_12px_0_#000] hover:bg-black transition-all duration-150 group text-decoration-none">
+                        <Instagram :size="48"
+                            class="mr-6 text-black group-hover:text-white group-hover:scale-110 transition-all duration-150"
                             stroke-width="2" />
-                        <span class="heading text-3xl">@rezkysaleng</span>
+                        <span
+                            class="heading text-3xl text-black group-hover:text-white transition-colors duration-150">@rezkysaleng</span>
                     </a>
                 </div>
             </div>
