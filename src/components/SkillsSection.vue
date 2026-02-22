@@ -19,10 +19,21 @@ const areas = [
 <template>
     <section id="skills" class="bg-secondary pb-24 pt-0">
         <!-- Marquee Skills Top -->
-        <div class="marquee-container bg-accent text-black border-y-5 border-black py-6 mb-24">
-            <div class="marquee-content !animation-duration-20s">
-                <span v-for="s in skills" :key="s" class="mx-4">{{ s }} &times;</span>
-                <span v-for="s in skills" :key="s + '_'" class="mx-4">{{ s }} &times;</span>
+        <div
+            class="bg-accent text-black border-y-[6px] border-black py-4 mb-24 overflow-hidden flex whitespace-nowrap group shadow-[0_8px_0_#111111]">
+            <div
+                class="marquee-content flex-shrink-0 flex items-center gap-12 px-6 min-w-max group-hover:[animation-play-state:paused] [animation-duration:55s]">
+                <span v-for="s in skills" :key="s + '_1'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_2'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_3'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_4'" class="font-black">{{ s }} &times;</span>
+            </div>
+            <div class="marquee-content flex-shrink-0 flex items-center gap-12 px-6 min-w-max group-hover:[animation-play-state:paused] [animation-duration:55s]"
+                aria-hidden="true">
+                <span v-for="s in skills" :key="s + '_5'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_6'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_7'" class="font-black">{{ s }} &times;</span>
+                <span v-for="s in skills" :key="s + '_8'" class="font-black">{{ s }} &times;</span>
             </div>
         </div>
 

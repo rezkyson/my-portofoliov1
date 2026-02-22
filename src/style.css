@@ -115,7 +115,7 @@ p { font-weight: 600; }
   font-size: 2rem;
   letter-spacing: -3px;
   text-transform: uppercase;
-  animation: marquee 15s linear infinite;
+  animation: marquee 35s linear infinite;
 }
 @keyframes marquee {
   0% { transform: translateX(0); }

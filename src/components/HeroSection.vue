@@ -152,27 +152,25 @@ const go = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smoot
 
         <!-- Marquee Strip Bottom -->
         <div class="bg-black w-full border-y-[6px] border-black mt-24 py-4 relative z-40 shadow-[0_8px_0_#111111] overflow-hidden flex whitespace-nowrap group">
-            <div class="marquee-content flex-shrink-0 flex items-center gap-4 px-2 min-w-max group-hover:[animation-play-state:paused]">
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
+            <div class="marquee-content flex-shrink-0 flex items-center gap-8 px-4 min-w-max group-hover:[animation-play-state:paused]">
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
             </div>
-            <div class="marquee-content flex-shrink-0 flex items-center gap-4 px-2 min-w-max group-hover:[animation-play-state:paused]" aria-hidden="true">
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
-                <span class="text-secondary">&times; SOFTWARE ENGINEER</span>
-                <span class="text-primary">&times; CREATIVE DEVELOPER</span>
-                <span class="text-accent">&times; SYSTEM ARCHITECT</span>
+            <div class="marquee-content flex-shrink-0 flex items-center gap-8 px-4 min-w-max group-hover:[animation-play-state:paused]" aria-hidden="true">
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
+                <span class="text-secondary">&times; SOFTWARE ENGINEER</span><span class="text-primary">&times; CREATIVE DEVELOPER</span><span class="text-accent">&times; SYSTEM ARCHITECT</span>
             </div>
         </div>
     </section>
